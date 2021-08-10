@@ -64,7 +64,7 @@ class App extends React.PureComponent {
   componentDidMount() {
     const { dispatch, currentMarket } = this.props;
     dispatch(loadMarkets());
-    if (env.param(env.NETWORK_ID) === 66) {
+    if ((env.NETWORK_ID) === 66) {
       this.initTestBrowserWallet();
     }
     if (currentMarket) {
@@ -98,7 +98,7 @@ class App extends React.PureComponent {
   };
 
   getNetworkName() {
-    switch (env.param(env.NETWORK_ID, 10)) {
+    switch ((env.NETWORK_ID, 10)) {
       case 1:
         return 'Mainnet';
       case 3:
